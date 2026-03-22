@@ -5,17 +5,6 @@ let currentProductId = null;
 // LOAD ALL PRODUCTS
 // =========================
 function loadProducts() {
-  const container = document.getElementById("products");
-
-  db.ref("products").on("value", snap => {
-    allProducts = [];
-
-    snap.forEach(child => {
-      allProducts.push({ id: child.key, ...child.val() });
-    });
-
-    displayProducts(allProducts);
-function loadProducts() {
   console.log("🔥 loadProducts called");
 
   const container = document.getElementById("products");
@@ -29,10 +18,18 @@ function loadProducts() {
   db.ref("products").on("value", snap => {
     console.log("📦 DATA:", snap.val());
 
+    allProducts = [];
+
     if (!snap.exists()) {
       container.innerHTML = "No products found";
       return;
     }
+
+    snap.forEach(child => {
+      allProducts.push({ id: child.key, ...child.val() });
+    });
+
+    displayProducts(allProducts);
   });
 }
 

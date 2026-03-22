@@ -305,3 +305,51 @@ button {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 15px;
 }
+.modern {
+  max-width: 350px;
+  margin: 100px auto;
+  padding: 25px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.brand {
+  color: #002f34;
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+.modern h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.modern input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.modern button {
+  width: 100%;
+  padding: 12px;
+  background: #002f34;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.modern button:hover {
+  background: #01464d;
+}
+
+.switch {
+  margin-top: 15px;
+}

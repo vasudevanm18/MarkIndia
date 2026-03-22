@@ -15,6 +15,24 @@ function loadProducts() {
     });
 
     displayProducts(allProducts);
+function loadProducts() {
+  console.log("🔥 loadProducts called");
+
+  const container = document.getElementById("products");
+
+  if (!db) {
+    console.log("❌ DB is null");
+    container.innerHTML = "Database not connected";
+    return;
+  }
+
+  db.ref("products").on("value", snap => {
+    console.log("📦 DATA:", snap.val());
+
+    if (!snap.exists()) {
+      container.innerHTML = "No products found";
+      return;
+    }
   });
 }
 

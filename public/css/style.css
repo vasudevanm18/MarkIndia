@@ -230,7 +230,39 @@ button {
   cursor: pointer;
 }
 
+
 .auth-container a {
   color: #002f34;
   text-decoration: none;
+}
+
+.product-container {
+  max-width: 600px;
+  margin: 20px auto;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.product-container img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.review-container {
+  max-width: 600px;
+  margin: 20px auto;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.review-container input,
+.review-container select {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
 }

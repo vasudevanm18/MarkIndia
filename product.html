@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product - MarkIndia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+</head>
+
+<body onload="checkAuth(); loadSingleProduct();">
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <h2>MarkIndia</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="profile.html">My Ads</a>
+    </nav>
+  </header>
+
+  <!-- PRODUCT DETAILS -->
+  <div class="product-container">
+    <img id="image">
+
+    <h2 id="title"></h2>
+    <p id="price"></p>
+    <p id="category"></p>
+
+    <button id="chatBtn">Chat with Seller</button>
+  </div>
+
+  <!-- REVIEWS -->
+  <div class="review-container">
+    <h3>Reviews</h3>
+
+    <select id="rating">
+      <option value="5">5 ⭐</option>
+      <option value="4">4 ⭐</option>
+      <option value="3">3 ⭐</option>
+      <option value="2">2 ⭐</option>
+      <option value="1">1 ⭐</option>
+    </select>
+
+    <input type="text" id="reviewText" placeholder="Write review">
+
+    <button onclick="submitReview()">Submit Review</button>
+
+    <div id="reviews"></div>
+  </div>
+
+  <!-- JS -->
+  <script src="js/firebase.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/product.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

@@ -175,3 +175,35 @@ button {
     flex-direction: column;
   }
 }
+/* AUTH PAGES */
+.auth-container {
+  max-width: 350px;
+  margin: 80px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 10px;
+  background: #002f34;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.auth-container a {
+  color: #002f34;
+  text-decoration: none;
+}

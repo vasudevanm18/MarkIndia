@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Post Ad - MarkIndia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+</head>
+
+<body onload="checkAuth(); loadEditData();">
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <h2>MarkIndia</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="profile.html">My Ads</a>
+    </nav>
+  </header>
+
+  <!-- FORM -->
+  <div class="form-container">
+    <h2 id="formTitle">Post Your Ad</h2>
+
+    <input type="text" id="title" placeholder="Product Title">
+
+    <input type="number" id="price" placeholder="Price">
+
+    <select id="category">
+      <option>Electronics</option>
+      <option>Vehicles</option>
+      <option>Books</option>
+    </select>
+
+    <input type="file" id="image">
+
+    <button onclick="postAd()">Submit</button>
+  </div>
+
+  <!-- JS -->
+  <script src="js/firebase.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/product.js"></script>
+  <script src="js/upload.js"></script>
+
+</body>
+</html>
